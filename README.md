@@ -6,8 +6,7 @@ This method is elaborated in the paper [One-Prompt to Segment All Medical Images
 
 
 ## A Quick Overview 
-
-<img width="880" height="380" src="https://github.com/WuJunde/Medical-SAM-Adapter/blob/main/figs/medsamadpt.jpeg">
+<img width="800" height="580" src="https://github.com/KidsWithTokens/one-prompt/blob/main/figs/oneprompt.png">
 
 
 ## Requirement
