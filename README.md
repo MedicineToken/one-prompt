@@ -19,10 +19,10 @@ Install the environment:
 
 ##  Dataset
 ### Download the open-source datasets 
-We collected 78 open-source datasets for training and testing the model. You could download them here.
+We collected 78 **open-source** datasets for training and testing the model. The datasets and their download links are in [here](https://drive.google.com/file/d/1iXFm9M1ocrWNkEIthWUWnZYY2-1l-qya/view?usp=share_link).
 
 ### Download the prompts
-The prompts can be downloaded here. Each prompt is saved a json message with the format ``{DATASET_NAME, SAMPLE_INDEX, PROMPT_TYPE, PROMPT_CONTENT}``
+The prompts corresponding to the datasets can be downloaded [here](https://drive.google.com/file/d/1cNv2WW_Cv2NYzpt90vvELaweM5ltIe8n/view?usp=share_link). Each prompt is saved a json message with the format ``{DATASET_NAME, SAMPLE_INDEX, PROMPT_TYPE, PROMPT_CONTENT}``
 
 ## Train
 run ``python train.py -net oneprompt -mod one_adpt -exp_name basic_exp -b 64 -dataset oneprompt -data_path *../data* -baseline 'unet'``
