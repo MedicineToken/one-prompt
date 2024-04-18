@@ -95,7 +95,16 @@ It is simple to run omeprompt on the other datasets. Just write another dataset 
      }
 
 ## Cite
-
+```
+@misc{wu2024oneprompt,
+      title={One-Prompt to Segment All Medical Images}, 
+      author={Junde Wu and Jiayuan Zhu and Yueming Jin and Min Xu},
+      year={2024},
+      eprint={2305.10300},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
+```
 
 
 
