@@ -96,13 +96,13 @@ It is simple to run omeprompt on the other datasets. Just write another dataset 
 
 ## Cite
 ```
-@misc{wu2024oneprompt,
-      title={One-Prompt to Segment All Medical Images}, 
-      author={Junde Wu and Jiayuan Zhu and Yueming Jin and Min Xu},
-      year={2024},
-      eprint={2305.10300},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV}
+@InProceedings{Wu_2024_CVPR,
+    author    = {Wu, Junde and Xu, Min},
+    title     = {One-Prompt to Segment All Medical Images},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {11302-11312}
 }
 ```
 
