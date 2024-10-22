@@ -22,9 +22,9 @@ class ISIC2016(Dataset):
     def __init__(self, args, data_path , transform = None, transform_msk = None, mode = 'Training',prompt = 'click', plane = False):
 
         df = pd.read_csv(os.path.join(data_path, 'ISBI2016_ISIC_Part3B_' + mode + '_GroundTruth.csv'), encoding='gbk')
-        self.name_list = df.iloc[:,1].tolist()
-        self.label_list = df.iloc[:,2].tolist()
-        self.data_path = data_path
+        self.name_list = df.iloc[:,0].tolist()
+        self.label_list = df.iloc[:,1].tolist()
+        self.data_path = os.path.join(data_path, 'ISBI2016_ISIC_Part3B_' + mode + "_Data")
         self.mode = mode
         self.prompt = prompt
         self.img_size = args.image_size
@@ -40,10 +40,10 @@ class ISIC2016(Dataset):
         point_label = 1
 
         """Get the images"""
-        name = self.name_list[index]
+        name = self.name_list[index] + ".jpg"
         img_path = os.path.join(self.data_path, name)
         
-        mask_name = self.label_list[index]
+        mask_name = self.name_list[index] + "_Segmentation.png"
         msk_path = os.path.join(self.data_path, mask_name)
 
         img = Image.open(img_path).convert('RGB')
@@ -60,11 +60,9 @@ class ISIC2016(Dataset):
             img = self.transform(img)
             torch.set_rng_state(state)
 
-
             if self.transform_msk:
                 mask = self.transform_msk(mask)
                 
-
         name = name.split('/')[-1].split(".jpg")[0]
         image_meta_dict = {'filename_or_obj':name}
         return {
